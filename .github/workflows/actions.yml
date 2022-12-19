@@ -1,4 +1,3 @@
-
 name: CI
 
 on:
@@ -24,4 +23,6 @@ jobs:
       - name: Install all depencies for CI
         run: npm ci
       - name: Install playwright browsers
+        run: npx playwright install --with-deps
+      - name: Run tests
         run: npm run test
