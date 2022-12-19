@@ -1,0 +1,11 @@
+playwright-report/
+allure-results
+allure-report
+README.md
+.gitlab-ci.yml
+.gitignore
+.eslintrc.json
+.env
+.dockerignore
+Dockerfile
+docker-compose.yml

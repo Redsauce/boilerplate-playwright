@@ -1,0 +1,30 @@
+{
+  "name": "redsauce",
+  "version": "1.0.0",
+  "description": "Playwright Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "keywords": [
+    "Playwright",
+    "boilerplate",
+    "testingbot",
+    "appium"
+  ],
+  "author": "Redsauce Engineering Services S.L.",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.28.1",
+    "@types/node": "^18.11.15",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "allure-commandline": "^2.20.1",
+    "eslint": "^8.29.0"
+  },
+  "dependencies": {
+    "allure-playwright": "^2.0.0-beta.21"
+  }
+}
