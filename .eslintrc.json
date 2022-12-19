@@ -17,6 +17,7 @@
     "plugins": [
         "@typescript-eslint"
     ],
+    "ignorePatterns" : ["/allure-report/"],
     "rules": {
         "semi": ["error", "always"],
 		"quotes": ["error", "double"],
