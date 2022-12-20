@@ -26,8 +26,8 @@ const config: PlaywrightTestConfig = {
 	/* Opt out of parallel tests on CI. */
 	workers: process.env.CI ? 1 : undefined,
 	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
-	reporter: "html",
-	//reporter: "allure-playwright",
+	//reporter: "html",
+	reporter: "allure-playwright",
 	
 	globalSetup: require.resolve("./global-setup.ts"),
 
@@ -50,7 +50,7 @@ const config: PlaywrightTestConfig = {
 				...devices["Desktop Chrome"],
 			},
 		},
-		{
+		/*	{
 			name: "firefox",
 			use: {
 				...devices["Desktop Firefox"],
@@ -61,7 +61,7 @@ const config: PlaywrightTestConfig = {
 			use: {
 				...devices["Desktop Safari"],
 			},
-		},
+		},*/
 		/* Test against mobile viewports. */
 		// {
 		//   name: 'Mobile Chrome',
