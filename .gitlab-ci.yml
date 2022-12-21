@@ -1,10 +1,10 @@
-image: mcr.microsoft.com/playwright:v1.27.0-focal
+image: node:latest
 
 stages:
   - lint
-  - tests
+  - test
 
-lint: 
+lint:
   stage: lint
   cache:
     key: npm
@@ -14,12 +14,12 @@ lint:
     - npm install
     - npm run lint
 
-tests:
-  stage: tests
+test:
+  stage: test
   cache:
-    key: npm  
+    key: npm
     paths:
       - node_modules
   script:
-      - npm install
-      - npm run test
+    - npm install
+    - npm run test
