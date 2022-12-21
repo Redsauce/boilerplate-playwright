@@ -28,7 +28,6 @@ const config: PlaywrightTestConfig = {
 	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
 	//reporter: "html",
 	reporter: "allure-playwright",
-	
 	globalSetup: require.resolve("./global-setup.ts"),
 
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -43,7 +42,6 @@ const config: PlaywrightTestConfig = {
 	},
 	/* Configure projects for major browsers */
 	projects: [
-		
 		{
 			name: "chromium",
 			use: {
@@ -92,7 +90,6 @@ const config: PlaywrightTestConfig = {
 	],
 	/* Folder for test artifacts such as screenshots, videos, traces, etc. */
 	// outputDir: 'test-results/',
-
 	/* Run your local dev server before starting the tests */
 	// webServer: {
 	//   command: 'npm run start',

@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
-import * as navigate from "../../components/componentsShared/navigate";
-import * as header from "../../components/header/header";
+//import * as navigate from "../../components/componentsShared/navigate";
+//import * as header from "../../components/header/header";
 
 
 test("Header logo redirects to home page", async ({ page }) => {
