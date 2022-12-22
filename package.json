@@ -5,24 +5,26 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
+    "tests": "npx ts-node launcher.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
   "keywords": [
     "Playwright",
     "boilerplate",
-    "testingbot",
-    "appium"
+    "testingbot"
   ],
   "author": "Redsauce Engineering Services S.L.",
   "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.28.1",
-    "@types/node": "^18.11.15",
+    "@types/node": "^18.11.17",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "allure-commandline": "^2.20.1",
-    "eslint": "^8.29.0"
+    "eslint": "^8.29.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
   },
   "dependencies": {
     "allure-playwright": "^2.0.0-beta.21",

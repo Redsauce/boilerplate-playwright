@@ -1,5 +1,6 @@
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
+import * as launcher from "./launcher";
 
 /* Read environment variables from file.
  * https://github.com/motdotla/dotenv */
@@ -41,6 +42,8 @@ const config: PlaywrightTestConfig = {
 	},
 	/* Configure projects for major browsers */
 	projects: [
+		launcher.project()
+		/*
 		
 		{
 			name: "chromium",
@@ -59,7 +62,7 @@ const config: PlaywrightTestConfig = {
 			use: {
 				...devices["Desktop Safari"],
 			},
-		},
+		},*/
 		/* Test against mobile viewports. */
 		// {
 		//   name: 'Mobile Chrome',

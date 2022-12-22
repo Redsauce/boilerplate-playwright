@@ -1,6 +1,5 @@
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
-
 /* Read environment variables from file.
  * https://github.com/motdotla/dotenv */
 
@@ -29,7 +28,6 @@ const config: PlaywrightTestConfig = {
 	//reporter: "html",
 	reporter: "allure-playwright",
 	globalSetup: require.resolve("./global-setup.ts"),
-
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
 		/* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
@@ -42,6 +40,7 @@ const config: PlaywrightTestConfig = {
 	},
 	/* Configure projects for major browsers */
 	projects: [
+		
 		{
 			name: "chromium",
 			use: {
