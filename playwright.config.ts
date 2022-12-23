@@ -1,7 +1,6 @@
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
-import * as launcher from "./launcher";
-
+const urls = require("./components/componentsShared/urls");
 /* Read environment variables from file.
  * https://github.com/motdotla/dotenv */
 
@@ -16,7 +15,7 @@ const config: PlaywrightTestConfig = {
 	expect: {
 	/* Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();` */
-		timeout: 5000
+		timeout: 5000,
 	},
 	/* Run tests in files in parallel */
 	fullyParallel: true,
@@ -27,36 +26,31 @@ const config: PlaywrightTestConfig = {
 	/* Opt out of parallel tests on CI. */
 	workers: process.env.CI ? 1 : undefined,
 	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
-	//reporter: "html",
-	reporter: "allure-playwright",
+	reporter: [["html"],["allure-playwright"]],
 	globalSetup: require.resolve("./global-setup.ts"),
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
 		/* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
 		actionTimeout: 0,
 		/* Base URL to use in actions like `await page.goto('/')`. */
-		//baseURL: "https://www.redsauce.net/test/blog/",
-		baseURL: "http://localhost:3000",
+		baseURL: urls.english_url,
 		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
 		trace: "on-first-retry",
 	},
 	/* Configure projects for major browsers */
 	projects: [
-		launcher.project()
-		/*
-		
 		{
 			name: "chromium",
 			use: {
 				...devices["Desktop Chrome"],
 			},
 		},
-		{
+		/*	{
 			name: "firefox",
 			use: {
 				...devices["Desktop Firefox"],
 			},
-		},
+		},/*
 		{
 			name: "webkit",
 			use: {

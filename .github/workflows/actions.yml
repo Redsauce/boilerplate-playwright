@@ -19,6 +19,10 @@ jobs:
 
   e2e-tests:
     runs-on: ubuntu-latest
+    environment: Test
+    env:
+      ENGLISH_URL: ${{ secrets.ENGLISH_URL }}
+      SPANISH_URL: ${{ secrets.SPANISH_URL }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3

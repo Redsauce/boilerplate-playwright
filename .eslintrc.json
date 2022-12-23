@@ -1,5 +1,7 @@
 {
+    "ignorePatterns" : ["/allure-report/", "allure-result"],
     "env": {
+        "node": true,
         "browser": true,
         "es2021": true
     },
@@ -17,17 +19,24 @@
     "plugins": [
         "@typescript-eslint"
     ],
-    "ignorePatterns" : ["/allure-report/"],
     "rules": {
+        "indent": ["error", "tab"],
+        "quotes": ["error", "double"],
         "semi": ["error", "always"],
-		"quotes": ["error", "double"],
-		"indent": ["error", "tab"],
-		"eqeqeq":"error",
-		"no-empty-function":"error",
-		"no-var":"error",
-		"max-lines": ["error", 100],
+        "prefer-const":"error",
 		"no-unused-vars": "error",
-		"prefer-const":"error",
+        "max-lines": ["error", 100],
+        "no-var": "error",
+        "semi-spacing": ["error", { "before": false, "after": true }],
+        "func-call-spacing": ["error", "never"],
+        "no-whitespace-before-property": "error",
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "block-spacing": "error",
+        "keyword-spacing": "error",
+        "eqeqeq": "error",
+        "dot-location": ["error", "property"],
+        "comma-dangle": ["error", "always-multiline"],
+        "curly": "error",
 		"@typescript-eslint/no-var-requires": 0
     }
 }
