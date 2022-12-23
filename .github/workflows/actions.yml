@@ -16,7 +16,7 @@ jobs:
 
   e2e-tests:
     runs-on: ubuntu-latest
-    environment: Test
+    environment: testing
     env:
       TB_SECRET: ${{ secrets.TB_SECRET }}
       TB_KEY: ${{ secrets.TB_KEY }}
