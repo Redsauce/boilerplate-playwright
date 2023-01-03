@@ -1,8 +1,8 @@
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
 const urls = require("./components/componentsShared/urls");
-/* Read environment variables from file.
- * https://github.com/motdotla/dotenv */
+
+/* Read environment variables from file: https://github.com/motdotla/dotenv */
 
 import * as dotenv from "dotenv";	
 dotenv.config();
@@ -26,7 +26,7 @@ const config: PlaywrightTestConfig = {
 	/* Opt out of parallel tests on CI. */
 	workers: process.env.CI ? 1 : undefined,
 	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
-	reporter: [["html"],["allure-playwright"]],
+	reporter: "allure-playwright",
 	globalSetup: require.resolve("./global-setup.ts"),
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {

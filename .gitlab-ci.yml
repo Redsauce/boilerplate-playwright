@@ -1,4 +1,4 @@
-image: mcr.microsoft.com/playwright:v1.29.0-focal 
+image: mcr.microsoft.com/playwright:v1.29.1-focal 
 
 stages:
   - lint
@@ -16,6 +16,9 @@ lint:
 
 test:
   stage: test
+  variables: 
+    TB_KEY: $TB_KEY
+    TB_SECRET: $TB_SECRET
   cache:
     key: npm
     paths:
