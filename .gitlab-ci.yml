@@ -1,0 +1,28 @@
+image: mcr.microsoft.com/playwright:v1.29.1-focal 
+
+stages:
+  - lint
+  - test
+
+lint:
+  stage: lint
+  cache:
+    key: npm
+    paths:
+      - node_modules
+  script:
+    - npm install
+    - npm run lint
+
+test:
+  stage: test
+  variables: 
+    TB_KEY: $TB_KEY
+    TB_SECRET: $TB_SECRET
+  cache:
+    key: npm
+    paths:
+      - node_modules
+  script:
+    - npm install
+    - npm run test
