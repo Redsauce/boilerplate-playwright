@@ -56,6 +56,8 @@ Inside this boilerplate you will also find a test that runs using testingbot. Te
 
 To run the test, inside the playwright configuration file you only need to have one project, which has to match the one you are using with the testingbot endpoint. If the configuration has more than one project the test that runs with testingbot will fail.
 
+This integration is a work in progress, testingbot is in its first stages with playwright so there are some things that may not work as expected.
+
 ## ESLint
 
 This project uses ESLint to statically analyze the code and quickly find problems. All the eslint specification can be found in the *.eslintrc.json* file.
